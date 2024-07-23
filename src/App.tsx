@@ -1,26 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
+import { Person } from './Person';
+import { Country } from './Interfaces/User';
+
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Person
+				name="adam"
+				age={19}
+				email="adam@adam.com"
+				isMarried={false}
+				country={Country.TN}
+				friends={['ahmed', 'saif']}
+			/>
+		</div>
+	);
 }
 
 export default App;
